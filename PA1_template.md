@@ -95,6 +95,17 @@ with(avg_steps, plot(interval, AvgSteps, type="l", xlab="Time",
 
 ![plot of chunk unnamed-chunk-7](figure/unnamed-chunk-7-1.png)
 
+The interval with the most steps, averaged across all days.
+
+
+```r
+avg_steps[which.max(as.matrix(avg_steps[,2])),1]
+```
+
+```
+## [1] 835
+```
+
 ##Imputing missing values
 
 First calculate and report the total number of missing values (NA) in the data set
@@ -133,7 +144,7 @@ hist(tot_imp_act$TotalDailySteps, xlab = "Total Daily Steps",
      main = "Histogram of Total Daily Steps Taken with Imputed Values")
 ```
 
-![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png)
+![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png)
 
 Next, the mean and median for this new data frame are calculated.
 
@@ -179,4 +190,4 @@ ggplot(tot_steps_day, aes(interval, AvgSteps))+geom_line()+facet_grid(day~.)+
   labs(x="Date", y="Average Steps", title="Average Interval Steps")
 ```
 
-![plot of chunk unnamed-chunk-13](figure/unnamed-chunk-13-1.png)
+![plot of chunk unnamed-chunk-14](figure/unnamed-chunk-14-1.png)

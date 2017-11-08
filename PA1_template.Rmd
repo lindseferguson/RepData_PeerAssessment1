@@ -66,6 +66,12 @@ with(avg_steps, plot(interval, AvgSteps, type="l", xlab="Time",
                      Course of a Day"))
 ```
 
+The interval with the most steps, averaged across all days.
+
+```{r}
+avg_steps[which.max(as.matrix(avg_steps[,2])),1]
+```
+
 ##Imputing missing values
 
 First calculate and report the total number of missing values (NA) in the data set
